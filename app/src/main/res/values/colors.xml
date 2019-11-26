@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F5542C</color>
+    <color name="colorPrimaryDark">#F5542C</color>
+    <color name="colorAccent">#f52c56</color>
+    <color name="status_bar">#d02549</color>
+
+    <color name="bg">#F9F9F9</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white30">#30ffffff</color>
+    <color name="white50">#50ffffff</color>
+    <color name="black30">#30000000</color>
+    <color name="whiteAA">#aaffffff</color>
+    <color name="black">#000000</color>
+    <color name="black70">#70000000</color>
+    <color name="blackAA">#AA000000</color>
+    <color name="orange">#f99120</color>
+    <color name="processing">#f99120</color>
+    <color name="menu_list_50">#50525252</color>
+    <color name="menu_list_30">#30525252</color>
+    <color name="menu_list_10">#10525252</color>
+    <color name="bg_review_dialog">#e7e7e7</color>
+    <color name="red">#FF3C00</color>
+    <color name="cancel">#FF2600</color>
+    <color name="green">#27ae61</color>
+    <color name="completed">#27ae61</color>
+    <color name="pink">#F56B49</color>
+    <color name="bg_pro_pic">#e2dcdc</color>
+    <color name="tab_divider">#80ffffff</color>
+    <color name="white40">#40ffffff</color>
+    <color name="black90">#90000000</color>
+    <color name="textView_empty">#000000</color>
+    <color name="bg_menu_item">#f5f5f5</color>
+
+    <color name="bg_bottom_bar">#ffffff</color>
+
+    <color name="text_menu_title">#626262</color>
+    <color name="text_menu_price">#7e7e7e</color>
+    <color name="text_menu_desc">#838383</color>
+
+    <color name="info_1">#E5E5E5</color>
+    <color name="info_2">#F2F2F2</color>
+
+    <color name="bg_news_list">#f6f6f6</color>
+    <color name="toolbar">#f8f8f8</color>
+    <color name="bg_cart_total">#E2E2E2</color>
+    <color name="bg_cart_list">#F0F0F0</color>
+    <color name="pending">#8720f1</color>
+
+    <integer-array name="pocket_bar_colors">
+        <item>@color/gplus_color_1</item>
+        <item>@color/gplus_color_2</item>
+        <item>@color/gplus_color_3</item>
+        <item>@color/gplus_color_4</item>
+    </integer-array>
+
+    <color name="gplus_color_1">#3e802f</color>
+    <color name="gplus_color_2">#f4b400</color>
+    <color name="gplus_color_3">#427fed</color>
+    <color name="gplus_color_4">#b23424</color>
+</resources>

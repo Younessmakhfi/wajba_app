@@ -1,0 +1,131 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/bg_news_list"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="3dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true"
+    android:paddingBottom="2dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_homepager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_pager_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/app_icon"
+            app:riv_corner_radius="5dp" />
+
+        <ProgressBar
+            android:id="@+id/loading_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_gradient_black_round" />
+
+        <TextView
+            android:id="@+id/tv_pager_home_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_above="@+id/ll_3">
+
+            <ImageView
+                android:id="@+id/iv_loc"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/location"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:id="@+id/tv_pager_home_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/whiteAA"
+                android:textSize="12sp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+
+            <RatingBar
+                android:id="@+id/rating_pager_home"
+                style="@style/RatingBar_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:max="5"
+                android:numStars="5"
+                android:theme="@style/RatingBar_white" />
+
+            <TextView
+                android:id="@+id/tv_pager_home_tot_rating"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:textSize="10sp"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:id="@+id/iv_home_rest_type"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end"
+                android:src="@mipmap/veg"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_fav_pager"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@mipmap/fav"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bg_round_red"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:paddingTop="3dp"
+    android:clickable="true"
+    android:background="?attr/selectableItemBackground">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:padding="2dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/cart"/>
+
+    <TextView
+        android:id="@+id/textView_menu_no"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:minWidth="17dp"
+        android:gravity="center"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/bg_circle_green"
+        android:text="2"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="10sp"/>
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+package com.wajeba.asyncTask;
+
+import android.os.AsyncTask;
+
+import com.wajeba.interfaces.SuccessListener;
+import com.wajeba.utils.Constant;
+import com.wajeba.utils.JsonUtils;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import okhttp3.RequestBody;
+
+public class LoadAddMenu extends AsyncTask<String, String, String> {
+
+    private RequestBody requestBody;
+    private String suc = "";
+    private String msg = "";
+    private SuccessListener successListener;
+
+    public LoadAddMenu(SuccessListener successListener, RequestBody requestBody) {
+        this.successListener = successListener;
+        this.requestBody = requestBody;
+    }
+
+    @Override
+    protected void onPreExecute() {
+        successListener.onStart();
+        super.onPreExecute();
+    }
+
+    @Override
+    protected String doInBackground(String... strings) {
+        try {
+            String json = JsonUtils.okhttpPost(Constant.SERVER_URL, requestBody);
+            JSONObject jOb = new JSONObject(json);
+            JSONArray jsonArray = jOb.getJSONArray(Constant.TAG_ROOT);
+
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject c = jsonArray.getJSONObject(i);
+
+                suc = c.getString(Constant.TAG_SUCCESS);
+                msg = c.getString(Constant.TAG_MSG);
+                if (c.has(Constant.TAG_CART_COUNT)) {
+                    Constant.menuCount = Integer.parseInt(c.getString(Constant.TAG_CART_COUNT));
+                }
+            }
+            return "1";
+        } catch (Exception ee) {
+            ee.printStackTrace();
+            return "0";
+        }
+    }
+
+    @Override
+    protected void onPostExecute(String s) {
+        successListener.onEnd(s, suc, msg);
+        super.onPostExecute(s);
+    }
+}

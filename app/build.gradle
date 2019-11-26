@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.wajeba.fooddelivery"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        manifestPlaceholders = [onesignal_app_id               : "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx",
+                                // Project number pulled from dashboard, local value is ignored.
+                                onesignal_google_project_number: "REMOTE"]
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildTypes.each {
+        it.buildConfigField 'String', 'SERVER_URL', SERVER_URL
+        it.buildConfigField 'String', 'API_KEY', API_KEY
+        it.buildConfigField 'String', 'ENC_KEY', ENC_KEY
+        it.buildConfigField 'String', 'IV', IV
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0-alpha4', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation 'junit:junit:4.12'
+    implementation project(path: ':checkbox')
+    implementation project(path: ':IRBottomNavigationLib')
+    implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-beta02'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.gms:play-services-ads:18.1.1'
+    implementation 'com.google.firebase:firebase-core:17.0.1'
+    implementation 'com.google.firebase:firebase-messaging:19.0.1'
+    implementation 'com.google.android.ads.consent:consent-library:1.0.7'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.tiagosantos:enchantedviewpager:1.1.0'
+    implementation 'com.onesignal:OneSignal:3.9.2'
+    implementation 'com.github.castorflex.smoothprogressbar:library-circular:1.3.0'
+    implementation 'com.romandanylyk:pageindicatorview:1.0.1@aar'
+    implementation 'com.thoughtbot:expandablerecyclerview:1.3'
+    implementation 'io.paperdb:paperdb:2.6'
+    implementation 'com.android.support:multidex:1.0.3'
+}
+apply plugin: 'com.google.gms.google-services'

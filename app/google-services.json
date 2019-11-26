@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "748780588289",
+    "firebase_url": "https://viavi-food.firebaseio.com",
+    "project_id": "viavi-food",
+    "storage_bucket": "viavi-food.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748780588289:android:c3ee83239c94e7a09b5f00",
+        "android_client_info": {
+          "package_name": "com.wajeba.fooddelivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748780588289-idudc00kgnef5nspaj5vkep6463b6s1g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wajeba.fooddelivery",
+            "certificate_hash": "86287da039bdf4b657e778bb659d24bb1c7064ba"
+          }
+        },
+        {
+          "client_id": "748780588289-9e1sbcoi63egsrdpp6cfm9orispgcbu1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3zFZc8dyvW4yOJUMrnZTk5eP1e2IINO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "748780588289-9e1sbcoi63egsrdpp6cfm9orispgcbu1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
