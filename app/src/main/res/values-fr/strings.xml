@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-        <string name="app_name">wajba - وجبة</string>
+        <string name="app_name">Wajba</string>
         <string name="navigation_drawer_open">Ouvrez le tiroir de navigation</string>
         <string name="navigation_drawer_close">Fermer le tiroir de navigation</string>
         <string name="isRTL">FAUX</string>

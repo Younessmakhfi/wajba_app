@@ -1,6 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            storeFile file('C:\\youcode\\Android Apps\\Keystores\\wajeba.jks')
+            storePassword 'Ntic500'
+            keyPassword 'Ntic500'
+        }
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.wajeba.fooddelivery"

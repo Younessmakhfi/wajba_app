@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/IRBottomNavigationLib/IRBottomNavigationLib.iml" filepath="$PROJECT_DIR$/IRBottomNavigationLib/IRBottomNavigationLib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android.iml" filepath="$PROJECT_DIR$/android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/checkbox/checkbox.iml" filepath="$PROJECT_DIR$/checkbox/checkbox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wajba app.iml" filepath="$PROJECT_DIR$/wajba app.iml" />
     </modules>
   </component>
 </project>
